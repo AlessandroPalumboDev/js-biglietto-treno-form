@@ -20,7 +20,7 @@ MILESTONE 1:
 
 MILESTONE 2:
 --Creo una struttura di bozza html
-FESE INPUT
+FASE INPUT
 --Cambio input età con un select a tre scelte e di conseguenza modifico la modalità di calcolo degli sconti
 --Aggiungo l'input per il nome
 --Aggiungo il bottone di reset dei campi
@@ -30,3 +30,5 @@ FASE OUTPUT
 --Cambio la modalità di output delle info del biglietto
 --Creo due numeri random (il primo a 2 cifre, il secondo a 5) carrozza e cp 
 --Finisco di stilizzare
+
+<!-- test -->
