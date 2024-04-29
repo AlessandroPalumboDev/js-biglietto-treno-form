@@ -27,7 +27,7 @@ FASE INPUT
 --Il primo bottone deve sia inviare i dati in output che rendere visibile il biglietto
 FASE OUTPUT
 --Creo una tabella per la visualizzazione delle info del biglietto
---Cambio la modalità di output delle info del biglietto
 --Creo due numeri random (il primo a 2 cifre, il secondo a 5) carrozza e cp 
+--Cambio la modalità di output delle info del biglietto
 --Finisco di stilizzare
 

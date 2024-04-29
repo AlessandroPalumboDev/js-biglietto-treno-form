@@ -15,6 +15,14 @@ genera.addEventListener('click', function () {
     let km = Number(document.getElementById('km').value);
     let eta = (document.getElementById('eta').value);
 
+    // Creo variabili carrozza e cp
+    let cp = Number(document.getElementById('cp').value);
+    let carrozza = Number(document.getElementById('carrozza').value);
+
+    // Creo numeri casuali per carrozza e cp
+    cp = Math.floor((Math.random() * 100000) + 1);
+    carrozza = Math.floor((Math.random() * 30) + 1);
+
     // compare biglietto al click
     document.getElementById("biglietto").classList.remove("d-none");
     document.getElementById("biglietto").classList.add("d-block");
@@ -64,7 +72,7 @@ const annulla = document.getElementById("annulla");
 annulla.addEventListener('click', function () {
     km.value = ("");
     eta === ('0'); // NON FUNZIONA!!!
-    nome.value = ("");
+    nome.value = ("");// NON FUNZIONA!!!
 
     // Scompare biglietto al click
     document.getElementById("biglietto").classList.remove("d-block");
