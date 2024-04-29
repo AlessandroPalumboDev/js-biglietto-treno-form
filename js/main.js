@@ -15,6 +15,10 @@ genera.addEventListener('click', function () {
     let km = Number(document.getElementById('km').value);
     let eta = (document.getElementById('eta').value);
 
+    // compare biglietto al click
+    document.getElementById("biglietto").classList.remove("d-none");
+    document.getElementById("biglietto").classList.add("d-block");
+
 
     // Se i dati inseriti dall'utente sono realmente numeri
     if (!isNaN(km)) {
@@ -49,7 +53,7 @@ genera.addEventListener('click', function () {
     }
     // Altrimenti esce questo avviso cattivissimo
     else {
-        console.log('Nei campi "Distanza in km" ed "Età in anni" puoi inserire solo numeri');
+        console.log('Nel campo "Km da percorrere" puoi inserire solo numeri');
     }
 
 
@@ -61,8 +65,11 @@ annulla.addEventListener('click', function () {
     km.value = ("");
     eta === ('0'); // NON FUNZIONA!!!
     nome.value = ("");
+
+    // Scompare biglietto al click
+    document.getElementById("biglietto").classList.remove("d-block");
+    document.getElementById("biglietto").classList.add("d-none");
 });
 
 
-// test
 

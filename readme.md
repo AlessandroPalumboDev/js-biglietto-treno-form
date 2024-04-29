@@ -31,4 +31,3 @@ FASE OUTPUT
 --Creo due numeri random (il primo a 2 cifre, il secondo a 5) carrozza e cp 
 --Finisco di stilizzare
 
-<!-- test -->
