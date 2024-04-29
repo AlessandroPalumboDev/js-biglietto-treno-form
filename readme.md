@@ -14,19 +14,19 @@ Solo una volta che il milestone 1 sarà completo e funzionante allora realizzere
 
 Svoglimento:
 MILESTONE 1:
--Creo i due imput e il bottone sul file html
--Riutilizzo il codice dell'ultimo esercizio per i calcoli del biglietto modificando le modalità di input da parte dell' utente e l'output solo in console usando il bottone per la creazione delle variabili della distanza e dell'età
+--Creo i due imput e il bottone sul file html
+--Riutilizzo il codice dell'ultimo esercizio per i calcoli del biglietto modificando le modalità di input da parte dell' utente e l'output solo in console usando il bottone per la creazione delle variabili della distanza e dell'età
 
 
 MILESTONE 2:
--Creo una struttura di bozza html
+--Creo una struttura di bozza html
 FESE INPUT
--Cambio input età con un select a tre scelte e di conseguenza modifico la modalità di calcolo degli sconti
--Aggiungo l'input per il nome
--Aggiungo il bottone di reset dei campi
--Il primo bottone deve sia inviare i dati in output che rendere visibile il biglietto
+--Cambio input età con un select a tre scelte e di conseguenza modifico la modalità di calcolo degli sconti
+--Aggiungo l'input per il nome
+--Aggiungo il bottone di reset dei campi
+--Il primo bottone deve sia inviare i dati in output che rendere visibile il biglietto
 FASE OUTPUT
--Creo una tabella per la visualizzazione delle info del biglietto
--Cambio la modalità di output delle info del biglietto
--Creo due numeri random (il primo a 2 cifre, il secondo a 5) carrozza e cp 
--Finisco di stilizzare
+--Creo una tabella per la visualizzazione delle info del biglietto
+--Cambio la modalità di output delle info del biglietto
+--Creo due numeri random (il primo a 2 cifre, il secondo a 5) carrozza e cp 
+--Finisco di stilizzare
