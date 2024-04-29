@@ -4,14 +4,17 @@
 // dell' utente e l'output solo in console usando il bottone per la creazione delle variabili della distanza e 
 // dell'età
 
+// Creo variabile input nome
+let eta = (document.getElementById('nome').value);
+
 // Creo variabile del bottone #genera con evento al click
-const element = document.getElementById("genera");
-element.addEventListener('click', function () {
+const genera = document.getElementById("genera");
+genera.addEventListener('click', function () {
 
     // Creo variabili degli input distanza ed età inseriti dall'utente
     let km = Number(document.getElementById('km').value);
     let eta = (document.getElementById('eta').value);
-    
+
 
     // Se i dati inseriti dall'utente sono realmente numeri
     if (!isNaN(km)) {
@@ -49,6 +52,15 @@ element.addEventListener('click', function () {
         console.log('Nei campi "Distanza in km" ed "Età in anni" puoi inserire solo numeri');
     }
 
+
+});
+
+// Creo variabile del bottone #annulla con evento al click
+const annulla = document.getElementById("annulla");
+annulla.addEventListener('click', function () {
+    km.value = ("");
+    eta === ('0'); // NON FUNZIONA!!!
+    nome.value = ("");
 });
 
 
