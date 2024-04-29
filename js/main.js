@@ -4,9 +4,6 @@
 // dell' utente e l'output solo in console usando il bottone per la creazione delle variabili della distanza e 
 // dell'età
 
-// Creo variabile input nome
-let eta = (document.getElementById('nome').value);
-
 // Creo variabile del bottone #genera con evento al click
 const genera = document.getElementById("genera");
 genera.addEventListener('click', function () {
@@ -14,14 +11,20 @@ genera.addEventListener('click', function () {
     // Creo variabili degli input distanza ed età inseriti dall'utente
     let km = Number(document.getElementById('km').value);
     let eta = (document.getElementById('eta').value);
+    let nome = (document.getElementById('nome').value);
 
     // Creo variabili carrozza e cp
     let cp = Number(document.getElementById('cp').value);
     let carrozza = Number(document.getElementById('carrozza').value);
 
     // Creo numeri casuali per carrozza e cp
-    cp = Math.floor((Math.random() * 100000) + 1);
-    carrozza = Math.floor((Math.random() * 30) + 1);
+    cp = Math.floor((Math.random() * 99999) + 1);
+    carrozza = Math.floor((Math.random() * 99) + 1);
+
+    // Stampo dati fissi
+    document.getElementById('carrozza').innerHTML = carrozza;
+    document.getElementById('cp').innerHTML = cp;
+    document.getElementById('ap_nome_passeggero').innerHTML = nome;
 
     // compare biglietto al click
     document.getElementById("biglietto").classList.remove("d-none");
@@ -45,17 +48,23 @@ genera.addEventListener('click', function () {
         if (eta === ('2')) {
             prezzoBiglietto = Number(prezzoBiglietto - (prezzoBiglietto / 100 * scontoMinore));
             console.log(`Utente minorenne: Il costo del biglietto è di: ${prezzoBiglietto.toFixed(2)} €`);
+            document.getElementById('offerta').innerHTML = ("Sconto passeggero minorenne");
+            document.getElementById('prezzo').innerHTML = (`${prezzoBiglietto.toFixed(2)} €`);
         }
 
         // Se il valore di età è superiore a 65 modifico la variabile del prezzo del biglietto e applico lo sconto dell 40%
         else if (eta === ('3')) {
             prezzoBiglietto = Number(prezzoBiglietto - (prezzoBiglietto / 100 * scontoNonno));
             console.log(`Utente oltre i 65 anni: Il costo del biglietto è di: ${prezzoBiglietto.toFixed(2)} €`);
+            document.getElementById('offerta').innerHTML = ("Sconto passeggero over 65");
+            document.getElementById('prezzo').innerHTML = (`${prezzoBiglietto.toFixed(2)} €`);
         }
 
         // Stampo prezzo del biglietto in forma umana (con massimo due decimali, per indicare centesimi sul prezzo) con sconti solo se applicabili
         else {
             console.log(`Il costo del biglietto è di: ${prezzoBiglietto.toFixed(2)} €`);
+            document.getElementById('offerta').innerHTML = ("Biglietto standard");
+            document.getElementById('prezzo').innerHTML = (`${prezzoBiglietto.toFixed(2)} €`);
         }
 
     }
@@ -63,8 +72,6 @@ genera.addEventListener('click', function () {
     else {
         console.log('Nel campo "Km da percorrere" puoi inserire solo numeri');
     }
-
-
 });
 
 // Creo variabile del bottone #annulla con evento al click
@@ -72,7 +79,7 @@ const annulla = document.getElementById("annulla");
 annulla.addEventListener('click', function () {
     km.value = ("");
     eta === ('0'); // NON FUNZIONA!!!
-    nome.value = ("");// NON FUNZIONA!!!
+    nome.value = ("");
 
     // Scompare biglietto al click
     document.getElementById("biglietto").classList.remove("d-block");
