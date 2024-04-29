@@ -78,7 +78,7 @@ genera.addEventListener('click', function () {
 const annulla = document.getElementById("annulla");
 annulla.addEventListener('click', function () {
     km.value = ("");
-    eta === ('0'); // NON FUNZIONA!!!
+    eta.value = ("0");
     nome.value = ("");
 
     // Scompare biglietto al click
