@@ -1,17 +1,13 @@
-"use strict";
-
-// --Riutilizzo il codice dell'ultimo esercizio per i calcoli del biglietto modificando le modalità di input da parte 
-// dell' utente e l'output solo in console usando il bottone per la creazione delle variabili della distanza e 
-// dell'età
+// "use strict";
 
 // Creo variabile del bottone #genera con evento al click
 const genera = document.getElementById("genera");
 genera.addEventListener('click', function () {
 
     // Creo variabili degli input distanza ed età inseriti dall'utente
-    let km = Number(document.getElementById('km').value);
-    let eta = (document.getElementById('eta').value);
-    let nome = (document.getElementById('nome').value);
+    const km = Number(document.getElementById('km').value);
+    const eta = (document.getElementById('eta').value);
+    const nome = (document.getElementById('nome').value);
 
     // Creo variabili carrozza e cp
     let cp = Number(document.getElementById('cp').value);
@@ -30,6 +26,8 @@ genera.addEventListener('click', function () {
     document.getElementById("biglietto").classList.remove("d-none");
     document.getElementById("biglietto").classList.add("d-block");
 
+    // --Riutilizzo il codice dell'ultimo esercizio per i calcoli del biglietto modificando le modalità di input da parte 
+    // dell' utente e l'output
 
     // Se i dati inseriti dall'utente sono realmente numeri
     if (!isNaN(km)) {
@@ -45,7 +43,7 @@ genera.addEventListener('click', function () {
         let prezzoBiglietto = km * costoBiglietto;
 
         // Se il valore di età è inferiore a 18 modifico la variabile del prezzo del biglietto e applico lo sconto del 20%
-        if (eta === ('2')) {
+        if (eta === ('bimbo')) {
             prezzoBiglietto = Number(prezzoBiglietto - (prezzoBiglietto / 100 * scontoMinore));
             console.log(`Utente minorenne: Il costo del biglietto è di: ${prezzoBiglietto.toFixed(2)} €`);
             document.getElementById('offerta').innerHTML = ("Sconto passeggero minorenne");
@@ -53,7 +51,7 @@ genera.addEventListener('click', function () {
         }
 
         // Se il valore di età è superiore a 65 modifico la variabile del prezzo del biglietto e applico lo sconto dell 40%
-        else if (eta === ('3')) {
+        else if (eta === ('nonno')) {
             prezzoBiglietto = Number(prezzoBiglietto - (prezzoBiglietto / 100 * scontoNonno));
             console.log(`Utente oltre i 65 anni: Il costo del biglietto è di: ${prezzoBiglietto.toFixed(2)} €`);
             document.getElementById('offerta').innerHTML = ("Sconto passeggero over 65");
@@ -77,9 +75,15 @@ genera.addEventListener('click', function () {
 // Creo variabile del bottone #annulla con evento al click
 const annulla = document.getElementById("annulla");
 annulla.addEventListener('click', function () {
-    km.value = ("");
-    eta.value = ("0");
-    nome.value = ("");
+    // Ricreo variabili degli input distanza ed età inseriti dall'utente
+    const km = Number(document.getElementById('km').value);
+    const eta = (document.getElementById('eta').value);
+    const nome = (document.getElementById('nome').value);
+
+    // Svuoto i campi
+    document.getElementById('km').value = ("");
+    document.getElementById('eta').value = "vuoto";
+    document.getElementById('nome').value = ("");
 
     // Scompare biglietto al click
     document.getElementById("biglietto").classList.remove("d-block");
